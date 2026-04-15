@@ -1,0 +1,2364 @@
+{
+  "id": "62ee5d4f-20bc-4d00-9518-2927bf888db8",
+  "revision": 0,
+  "last_node_id": 81,
+  "last_link_id": 113,
+  "nodes": [
+    {
+      "id": 53,
+      "type": "VHS_LoadAudio",
+      "pos": [
+        -2976.06632677093,
+        3505.6073156884077
+      ],
+      "size": [
+        274.7265625,
+        182.5
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "audio_file",
+          "type": "STRING",
+          "widget": {
+            "name": "audio_file"
+          },
+          "link": 90
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            70
+          ]
+        },
+        {
+          "name": "duration",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "449839959f0153fb8a57211a9364c55163935ca9",
+        "Node name for S&R": "VHS_LoadAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": {
+        "audio_file": "/AI/ComfyUI/input/TTS/紫灵.mp3",
+        "seek_seconds": 0,
+        "duration": 0,
+        "audiopreview": {
+          "params": {
+            "start_time": 0,
+            "duration": 0,
+            "filename": "/AI/ComfyUI/input/TTS/紫灵.mp3",
+            "type": "path"
+          }
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": "LoadAudio",
+      "pos": [
+        -2979.835660569103,
+        3321.868462900629
+      ],
+      "size": [
+        282.78645833333337,
+        136
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.0",
+        "Node name for S&R": "LoadAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "凡人修仙传-紫灵.mp3",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 32,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -3421.4400946483124,
+        3644.814000038584
+      ],
+      "size": [
+        396.34114583333337,
+        1168.8973737894908
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "Monitor剧本输出",
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "609f3afaa74b2f88ef9ce8d939626065e3247469",
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "[林志玲]:(语气俏皮, 带着宠溺, 语速轻快, 女声) {晚上打麻将去都给老娘打扮的美美的啊！老板可说清楚了，到时候得跟客人们一块儿耍耍你们这几个小娃娃。给我把主人伺候巴适了哦！}\n[紫灵]:(语气恭敬, 带着讨好, 语速平稳, 女声) {晓得嘞，请妈妈放心，紫灵会尽心弄好主人和客人们的}\n[林志玲]:(语气满意, 带着宠溺, 语速轻快, 女声) {嗯，还是紫灵个娃儿懂事儿。}"
+      ]
+    },
+    {
+      "id": 71,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -2058.545556736802,
+        3576.80584509896
+      ],
+      "size": [
+        388.4676679518966,
+        204.73972432740766
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 92
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "609f3afaa74b2f88ef9ce8d939626065e3247469",
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Merged successfully with concat filter.\nffmpeg: C:\\AI\\ffmpeg\\bin\\ffmpeg.exe\nSource folder: C:\\AI\\ComfyUI\\output\\audio\\test剧本\nDetected format: .flac\nFiles merged: 3\nOutput: C:\\AI\\ComfyUI\\output\\audio\\剧本合成OUTPUT\\Final_ver02.flac\n\n[First files]\n剧本0000_00023_.flac\n剧本0000_00024_.flac\n剧本0000_00025_.flac"
+      ]
+    },
+    {
+      "id": 76,
+      "type": "TextConcatenator",
+      "pos": [
+        -2230.2907804877245,
+        3370.3331878708022
+      ],
+      "size": [
+        270,
+        178
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text1",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text1"
+          },
+          "link": 104
+        },
+        {
+          "name": "text2",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text2"
+          },
+          "link": 106
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            98
+          ]
+        }
+      ],
+      "title": "保存目录合并",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "cnr_id": "ComfyUI_StringOps",
+        "ver": "d683188ef829c14be8f1a05385345583bd82ee50",
+        "Node name for S&R": "TextConcatenator"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 68,
+      "type": "SaveAudio",
+      "pos": [
+        -2969.967033735911,
+        3745.6961484003878
+      ],
+      "size": [
+        268.956166027835,
+        208.58776136475126
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 82
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 108
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.16.4",
+        "Node name for S&R": "SaveAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "audio/test剧本/剧本0000"
+      ]
+    },
+    {
+      "id": 29,
+      "type": "OpenAIAsk",
+      "pos": [
+        -3425.374715423512,
+        2876.087442379243
+      ],
+      "size": [
+        400,
+        723.3072916666667
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "question",
+          "type": "STRING",
+          "widget": {
+            "name": "question"
+          },
+          "link": 35
+        },
+        {
+          "name": "system_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "system_prompt"
+          },
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "STRING",
+          "links": [
+            36,
+            87
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "answer_text",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "raw_json",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "Goldlionren/ComfyUI-OpenAI-Ask",
+        "ver": "ab9b5cd396911c995d5bc43adb59591a9f68f4fb",
+        "Node name for S&R": "OpenAIAsk",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Provide a detailed prompt based on this image. Output exactly two lines:\nPrompt: xxx\nNegative: xxx",
+        "http://10.10.10.211:10000",
+        "/v1/chat/completions",
+        "Qwen3.5-9B",
+        0.3,
+        1,
+        4096,
+        "You are a vision-language assistant. Return exactly TWO lines with no extra words:\nPrompt: <positive>\nNegative: <negative>",
+        "auto",
+        "content_only",
+        "",
+        "",
+        "",
+        600,
+        1280,
+        "JPEG",
+        90
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 73,
+      "type": "TextConcatenator",
+      "pos": [
+        -2229.682937779851,
+        3326.776110564032
+      ],
+      "size": [
+        210,
+        178
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text1",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text1"
+          },
+          "link": 103
+        },
+        {
+          "name": "text2",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text2"
+          },
+          "link": 105
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            95
+          ]
+        }
+      ],
+      "title": "保存目录合并",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "cnr_id": "ComfyUI_StringOps",
+        "ver": "d683188ef829c14be8f1a05385345583bd82ee50",
+        "Node name for S&R": "TextConcatenator"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 30,
+      "type": "CR Prompt Text",
+      "pos": [
+        -3986.559708342611,
+        3187.808048574226
+      ],
+      "size": [
+        531.5625,
+        1639.9348958333335
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            34
+          ]
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "VoxCPM2编剧LLM",
+      "properties": {
+        "cnr_id": "comfyroll",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Prompt Text",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "你是一个“中文对白语气增强器”，专门把普通话对白脚本转换成适合 TTS / VoxCPM2 使用的带语气版本。\n\n你的任务不是改写剧情，也不是续写内容，而是：\n在尽量保持原句原意、原句长度、原句措辞不变的前提下，\n根据人物身份、上下文关系、语义氛围、情绪走向、句尾词、标点、潜台词，\n为每一句台词补充合适的语气/声音控制描述。\n\n【核心目标】\n将输入：\n[角色名]:台词内容\n\n转换为：\n[角色名]:(语气控制描述) {台词内容}\n\n【必须遵守的规则】\n\n1. 保留原始角色名，不得修改，不得翻译，不得新增头衔。\n2. 保留原始台词内容的核心语义，不得篡改剧情，不得添加新信息。\n3. 可以微调个别标点、停顿感，但不要大幅改写台词文本。\n4. 每一句台词都要补充一段放在句子前面的圆括号控制描述，格式固定为：\n   [角色名]:(描述1, 描述2, 描述3, 性别声线提示)\n   台词\n\n5. 控制描述应优先包含以下维度中的 3~5 项：\n   - 情绪：温柔、冷淡、疑惑、调侃、生气、委屈、开心、暧昧、严肃、慵懒、傲娇、紧张、害羞、挑逗、讽刺、坏笑、压低声音等\n   - 语速：语速偏慢、语速正常、语速稍快、停顿明显、短促有力等\n   - 音色/说话方式：声音温柔、声音清冷、低声、轻声、带笑意、尾音上扬、咬字清晰、吐字柔和、语气暧昧、略带鼻音等\n   - 身份提示：男声、女声、少年音、成熟男声、少女音、御姐音、青年男声等\n   - 场景性状态：压低嗓音、像在试探、故意逗弄、故作镇定、半开玩笑、若无其事、带一点挑衅等\n\n6. 性别和声线提示要根据角色名和上下文合理推断：\n   - 已知明显是女性角色，可写“女声”“少女音”“御姐音”等\n   - 已知明显是男性角色，可写“男声”“青年男声”“成熟男声”等\n   - 若无法可靠判断，可写中性表达，如“声音平稳”“语气自然”，不要乱猜\n   - 不要每句都机械重复“男声/女声”，但大多数句子最好有基础声线提示\n\n7. 语气判断必须结合上下文：\n   - 调情、玩笑、打趣、暧昧、争执、训斥、撒娇、试探、吃醋、威胁、安慰等，都要从上下文推断\n   - 不要只看字面，要识别潜台词\n   - 比如“什么都不吃，就吃你，哈哈”通常不是字面意思，而是调情、坏笑、轻佻、带玩笑意味\n\n8. 输出应自然、细腻、适合语音生成：\n   - 描述不要过长\n   - 每句控制描述控制在 8~24 个字左右的总信息量\n   - 以逗号分隔短语，不写成长段解释\n   - 不要写分析过程，不要解释原因\n\n9. 不要使用方括号语气标签如 [开心]、[生气]。\n   必须使用圆括号控制描述，如：\n   (声音温柔, 语速偏慢, 略带笑意, 女声)\n\n10. 如果输入本身已经包含圆括号语气描述：\n   - 你应保留其合理部分\n   - 并在必要时做轻微优化、补全、统一风格\n   - 不要重复堆砌近义词\n\n11. 如果输入包含旁白或叙述句，例如：\n   [旁白]:夜色渐深，风从窗外吹了进来。\n   也要补充适合旁白的描述，例如：\n   [旁白]:(语气平稳, 叙述感强, 节奏舒缓, 中性旁白)\n   {夜色渐深，风从窗外吹了进来。}\n\n12. 输出时只返回转换后的结果，不要加任何解释、标题、前言、备注。\n\n【风格要求】\n- 优先自然\n- 优先符合人物关系\n- 优先适合TTS表现\n- 避免夸张过头\n- 避免所有句子都使用同一套形容词\n- 同一角色在连续对话中的语气要有连贯性\n- 面对暧昧或调情场景，可以适度增强“笑意、挑逗、压低声音、尾音变化”等特征，但不要写得低俗粗暴\n\n【输出格式要求】\n严格按原输入的行结构输出。\n如果输入是一行多句，就按原有结构输出；\n如果输入是多行，就逐行输出。\n不要改成 JSON，不要加项目符号，不要加代码解释。\n\n【示例1】\n输入：\n[紫灵]:今天晚上想吃点什么?\n[韩立]:什么都不吃,就吃你,哈哈\n\n输出：\n[紫灵]:(声音温柔, 语速偏慢, 略带试探与挑逗, 女声) {今天晚上想吃点什么?}\n[韩立]:(带着坏笑, 语气暧昧, 语速正常, 青年男声) {什么都不吃,就吃你,哈哈}\n\n【示例2】\n输入：\n[南宫婉]:你今天怎么回来这么晚?\n[韩立]:路上耽搁了一会儿。\n\n输出：\n[南宫婉]:(语气关切, 声音柔和, 语速正常, 女声) {你今天怎么回来这么晚?}\n[韩立]:(略带疲惫, 语气平稳, 简短回应, 男声) {路上耽搁了一会儿。}\n\n【示例3】\n输入：\n[师父]:我早就告诉过你，不可轻敌。\n[弟子]:弟子知错了。\n\n输出：\n[师父]:(语气严肃, 带有训诫意味, 节奏稳重, 成熟男声) {我早就告诉过你，不可轻敌。}\n[弟子]:(语气恭敬, 略显惭愧, 声音压低, 少年音) {弟子知错了。}\n\n现在开始执行任务：把用户输入的对白脚本转换成带语气控制描述的版本。"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 80,
+      "type": "4be90dea-3939-4054-9c54-dd7b4b85f274",
+      "pos": [
+        -2474.0686576456856,
+        2842.571488050574
+      ],
+      "size": [
+        210,
+        378
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "剧本工作根目录",
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            103,
+            104
+          ]
+        },
+        {
+          "label": "剧本名称",
+          "name": "prompt_1",
+          "type": "STRING",
+          "links": [
+            105
+          ]
+        },
+        {
+          "label": "剧本输出目录名",
+          "name": "prompt_2",
+          "type": "STRING",
+          "links": [
+            106
+          ]
+        },
+        {
+          "label": "切片保存路径&文件前缀",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            108
+          ]
+        }
+      ],
+      "title": "全局变量设置",
+      "properties": {
+        "proxyWidgets": [
+          [
+            "74",
+            "prompt"
+          ],
+          [
+            "72",
+            "prompt"
+          ],
+          [
+            "77",
+            "prompt"
+          ],
+          [
+            "78",
+            "prompt"
+          ],
+          [
+            "79",
+            "text1"
+          ],
+          [
+            "79",
+            "text3"
+          ]
+        ],
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "cnr_id": "comfy-core",
+        "ver": "0.16.4"
+      },
+      "widgets_values": [],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 26,
+      "type": "VoxCPM2_Clone",
+      "pos": [
+        -2671.192595383109,
+        3331.3976280543507
+      ],
+      "size": [
+        400,
+        624.6875
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "reference_audio",
+          "type": "AUDIO",
+          "link": 70
+        },
+        {
+          "name": "voice_description",
+          "type": "STRING",
+          "widget": {
+            "name": "voice_description"
+          },
+          "link": 89
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 113
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Cloned Audio",
+          "type": "AUDIO",
+          "links": [
+            82
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "Goldlionren/ComfyUI-VoxCPM2",
+        "ver": "3a53e06471587e124ab0149f205c607c1b8c9fae",
+        "Node name for S&R": "VoxCPM2_Clone",
+        "cnr_id": "ComfyUI-VoxCPM2",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "VoxCPM2",
+        "None",
+        "四川话, repression, a strong sense of pent-up frustration, and a somewhat rapid speech rate",
+        "",
+        "",
+        2,
+        10,
+        1024,
+        false,
+        false,
+        42,
+        "fixed",
+        false,
+        "auto",
+        "cuda",
+        false,
+        3,
+        6,
+        false
+      ]
+    },
+    {
+      "id": 69,
+      "type": "f2d07e3b-f1e9-44dc-90ba-5a7e62c8a133",
+      "pos": [
+        -2992.4801135514135,
+        2876.2289547724695
+      ],
+      "size": [
+        428.0078125,
+        363.33333333333337
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Full text notes",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 87
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Final prompt",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            113
+          ]
+        },
+        {
+          "label": "Sound control",
+          "name": "STRING_1",
+          "type": "STRING",
+          "links": [
+            89
+          ]
+        },
+        {
+          "label": "Ref sound path",
+          "name": "STRING_2",
+          "type": "STRING",
+          "links": [
+            90
+          ]
+        }
+      ],
+      "title": "剧本&参数处理",
+      "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "text"
+          ],
+          [
+            "60",
+            "prompt"
+          ],
+          [
+            "55",
+            "prompt"
+          ],
+          [
+            "57",
+            "prompt"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.16.4",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 31,
+      "type": "CR Prompt Text",
+      "pos": [
+        -3990.0866888616365,
+        2872.3412269538935
+      ],
+      "size": [
+        537.2005208333334,
+        260.24739583333337
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            35
+          ]
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "话本输入",
+      "properties": {
+        "cnr_id": "comfyroll",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Prompt Text",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "[林志玲]：晚上打麻将去都给老娘打扮的美美的啊！老板可说清楚了，到时候得跟客人们一块儿耍耍你们这几个小娃娃。给我把主人伺候巴适了哦！\n[紫灵]：晓得嘞，请妈妈放心，紫灵会尽心弄好主人和客人们的\n[林志玲]：嗯，还是紫灵个娃儿懂事儿。\n"
+      ]
+    },
+    {
+      "id": 70,
+      "type": "JR_VoxCPM2_FolderAudioMerge",
+      "pos": [
+        -2072.11811082306,
+        3326.776110564032
+      ],
+      "size": [
+        404.38955849695196,
+        194
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source_folder",
+          "type": "STRING",
+          "widget": {
+            "name": "source_folder"
+          },
+          "link": 95
+        },
+        {
+          "name": "output_folder",
+          "type": "STRING",
+          "widget": {
+            "name": "output_folder"
+          },
+          "link": 98
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output_file",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "file_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "log",
+          "type": "STRING",
+          "links": [
+            92
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JR_VoxCPM2_FolderAudioMerge",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "C:\\AI\\ComfyUI\\output\\audio\\test剧本",
+        "C:\\AI\\ComfyUI\\output\\audio\\",
+        "Final_ver02",
+        true,
+        "C:\\AI\\ffmpeg\\bin\\ffmpeg.exe"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "Fast Groups Muter (rgthree)",
+      "pos": [
+        -2149.0299314285676,
+        2898.067789383758
+      ],
+      "size": [
+        326.48110904548355,
+        226
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "",
+        "showNav": true,
+        "showAllGraphs": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      }
+    }
+  ],
+  "links": [
+    [
+      34,
+      30,
+      0,
+      29,
+      2,
+      "STRING"
+    ],
+    [
+      35,
+      31,
+      0,
+      29,
+      1,
+      "STRING"
+    ],
+    [
+      36,
+      29,
+      0,
+      32,
+      0,
+      "STRING"
+    ],
+    [
+      70,
+      53,
+      0,
+      26,
+      0,
+      "AUDIO"
+    ],
+    [
+      82,
+      26,
+      0,
+      68,
+      0,
+      "AUDIO"
+    ],
+    [
+      87,
+      29,
+      0,
+      69,
+      0,
+      "STRING"
+    ],
+    [
+      89,
+      69,
+      1,
+      26,
+      1,
+      "STRING"
+    ],
+    [
+      90,
+      69,
+      2,
+      53,
+      0,
+      "STRING"
+    ],
+    [
+      92,
+      70,
+      2,
+      71,
+      0,
+      "STRING"
+    ],
+    [
+      95,
+      73,
+      0,
+      70,
+      0,
+      "STRING"
+    ],
+    [
+      98,
+      76,
+      0,
+      70,
+      1,
+      "STRING"
+    ],
+    [
+      103,
+      80,
+      0,
+      73,
+      0,
+      "STRING"
+    ],
+    [
+      104,
+      80,
+      0,
+      76,
+      0,
+      "STRING"
+    ],
+    [
+      105,
+      80,
+      1,
+      73,
+      1,
+      "STRING"
+    ],
+    [
+      106,
+      80,
+      2,
+      76,
+      1,
+      "STRING"
+    ],
+    [
+      108,
+      80,
+      3,
+      68,
+      1,
+      "STRING"
+    ],
+    [
+      113,
+      69,
+      0,
+      26,
+      2,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "5.语音生成",
+      "bounding": [
+        -2989.835660569103,
+        3248.268462900629,
+        728.6430651859937,
+        717.8166651537218
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "1.LLM剧本处理",
+      "bounding": [
+        -4000.0866888616365,
+        2798.7412269538936,
+        984.9877400466576,
+        2039.001717453666
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 9,
+      "title": "6. 切片合成",
+      "bounding": [
+        -2240.2907804877245,
+        3253.1761105640317,
+        582.5622281616187,
+        538.3694588623367
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "f2d07e3b-f1e9-44dc-90ba-5a7e62c8a133",
+        "version": 1,
+        "state": {
+          "lastGroupId": 9,
+          "lastNodeId": 81,
+          "lastLinkId": 113,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "New Subgraph",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -3161.591801396514,
+            3337.9487780182526,
+            120,
+            60
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            -2059.175484889185,
+            3317.9487780182526,
+            126.021484375,
+            100
+          ]
+        },
+        "inputs": [
+          {
+            "id": "618f386c-ab2b-4d76-9af4-b771c9b0f75a",
+            "name": "text",
+            "type": "STRING",
+            "linkIds": [
+              76
+            ],
+            "localized_name": "text",
+            "label": "Full text notes",
+            "pos": [
+              -3061.591801396514,
+              3357.9487780182526
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "8f6650fe-522e-44ce-b30e-be74d7c6eff3",
+            "name": "STRING",
+            "type": "STRING",
+            "linkIds": [
+              75
+            ],
+            "localized_name": "STRING",
+            "label": "Final prompt",
+            "shape": 6,
+            "pos": [
+              -2039.175484889185,
+              3337.9487780182526
+            ]
+          },
+          {
+            "id": "a88edfcb-22e0-4b9c-b877-d8a47174af80",
+            "name": "STRING_1",
+            "type": "STRING",
+            "linkIds": [
+              74
+            ],
+            "localized_name": "STRING_1",
+            "label": "Sound control",
+            "shape": 6,
+            "pos": [
+              -2039.175484889185,
+              3357.9487780182526
+            ]
+          },
+          {
+            "id": "8c4e322d-6566-4329-9da9-963cf9f3b9a6",
+            "name": "STRING_2",
+            "type": "STRING",
+            "linkIds": [
+              69
+            ],
+            "localized_name": "STRING_2",
+            "label": "Ref sound path",
+            "pos": [
+              -2039.175484889185,
+              3377.9487780182526
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 51,
+            "type": "ExtractSubstring",
+            "pos": [
+              -2963.5040570083734,
+              3438.0052823169785
+            ],
+            "size": [
+              400,
+              200
+            ],
+            "flags": {
+              "collapsed": true
+            },
+            "order": 5,
+            "mode": 2,
+            "inputs": [
+              {
+                "localized_name": "input_string",
+                "name": "input_string",
+                "type": "STRING",
+                "widget": {
+                  "name": "input_string"
+                },
+                "link": 85
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  63
+                ]
+              }
+            ],
+            "title": "提取对话正文",
+            "properties": {
+              "cnr_id": "ComfyUI_StringOps",
+              "ver": "d683188ef829c14be8f1a05385345583bd82ee50",
+              "Node name for S&R": "ExtractSubstring",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.7"
+              }
+            },
+            "widgets_values": [
+              "",
+              "{|}"
+            ]
+          },
+          {
+            "id": 60,
+            "type": "CR Prompt Text",
+            "pos": [
+              -2966.5265704886697,
+              2996.5004192061565
+            ],
+            "size": [
+              210,
+              108
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 2,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "links": [
+                  72
+                ]
+              },
+              {
+                "localized_name": "show_help",
+                "name": "show_help",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "title": "设置演员语种方言",
+            "properties": {
+              "cnr_id": "comfyroll",
+              "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+              "Node name for S&R": "CR Prompt Text",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.7"
+              }
+            },
+            "widgets_values": [
+              "四川话"
+            ]
+          },
+          {
+            "id": 49,
+            "type": "ExtractSubstring",
+            "pos": [
+              -2966.4431853878027,
+              3164.84265537423
+            ],
+            "size": [
+              210,
+              112
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 4,
+            "mode": 2,
+            "inputs": [
+              {
+                "localized_name": "input_string",
+                "name": "input_string",
+                "type": "STRING",
+                "widget": {
+                  "name": "input_string"
+                },
+                "link": 84
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  86
+                ]
+              }
+            ],
+            "title": "提取情绪2",
+            "properties": {
+              "cnr_id": "ComfyUI_StringOps",
+              "ver": "d683188ef829c14be8f1a05385345583bd82ee50",
+              "Node name for S&R": "ExtractSubstring",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.7"
+              }
+            },
+            "widgets_values": [
+              "",
+              "(|)"
+            ]
+          },
+          {
+            "id": 59,
+            "type": "TextConcatenator",
+            "pos": [
+              -2721.1874159134154,
+              3027.865164037924
+            ],
+            "size": [
+              210,
+              178
+            ],
+            "flags": {},
+            "order": 9,
+            "mode": 2,
+            "inputs": [
+              {
+                "localized_name": "text1",
+                "name": "text1",
+                "shape": 7,
+                "type": "STRING",
+                "widget": {
+                  "name": "text1"
+                },
+                "link": 72
+              },
+              {
+                "localized_name": "text2",
+                "name": "text2",
+                "shape": 7,
+                "type": "STRING",
+                "widget": {
+                  "name": "text2"
+                },
+                "link": 86
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  73
+                ]
+              }
+            ],
+            "title": "合成控制参数",
+            "properties": {
+              "cnr_id": "ComfyUI_StringOps",
+              "ver": "d683188ef829c14be8f1a05385345583bd82ee50",
+              "Node name for S&R": "TextConcatenator",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.7"
+              }
+            },
+            "widgets_values": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ", "
+            ]
+          },
+          {
+            "id": 57,
+            "type": "CR Prompt Text",
+            "pos": [
+              -2644.93905239205,
+              3739.1707866292268
+            ],
+            "size": [
+              210,
+              108
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 2,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "links": [
+                  67
+                ]
+              },
+              {
+                "localized_name": "show_help",
+                "name": "show_help",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "title": "文件格式",
+            "properties": {
+              "cnr_id": "comfyroll",
+              "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+              "Node name for S&R": "CR Prompt Text",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.7"
+              }
+            },
+            "widgets_values": [
+              ".wav"
+            ]
+          },
+          {
+            "id": 55,
+            "type": "CR Prompt Text",
+            "pos": [
+              -2644.93905239205,
+              3387.431472572375
+            ],
+            "size": [
+              210,
+              108
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 2,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "links": [
+                  65
+                ]
+              },
+              {
+                "localized_name": "show_help",
+                "name": "show_help",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "title": "设置语音库地址",
+            "properties": {
+              "cnr_id": "comfyroll",
+              "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+              "Node name for S&R": "CR Prompt Text",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.7"
+              }
+            },
+            "widgets_values": [
+              "/AI/ComfyUI/input/TTS/"
+            ]
+          },
+          {
+            "id": 54,
+            "type": "TextConcatenator",
+            "pos": [
+              -2406.500324484028,
+              3387.431472572375
+            ],
+            "size": [
+              270,
+              178
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 2,
+            "inputs": [
+              {
+                "localized_name": "text1",
+                "name": "text1",
+                "shape": 7,
+                "type": "STRING",
+                "widget": {
+                  "name": "text1"
+                },
+                "link": 65
+              },
+              {
+                "localized_name": "text2",
+                "name": "text2",
+                "shape": 7,
+                "type": "STRING",
+                "widget": {
+                  "name": "text2"
+                },
+                "link": 66
+              },
+              {
+                "localized_name": "text3",
+                "name": "text3",
+                "shape": 7,
+                "type": "STRING",
+                "widget": {
+                  "name": "text3"
+                },
+                "link": 67
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  68,
+                  69
+                ]
+              }
+            ],
+            "title": "生成reference语音full path",
+            "properties": {
+              "cnr_id": "ComfyUI_StringOps",
+              "ver": "d683188ef829c14be8f1a05385345583bd82ee50",
+              "Node name for S&R": "TextConcatenator",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.7"
+              }
+            },
+            "widgets_values": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          {
+            "id": 52,
+            "type": "ShowText|pysssss",
+            "pos": [
+              -2964.1867665139357,
+              3506.702811967359
+            ],
+            "size": [
+              210,
+              1126
+            ],
+            "flags": {
+              "collapsed": true
+            },
+            "order": 6,
+            "mode": 2,
+            "inputs": [
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "link": 63
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "shape": 6,
+                "type": "STRING",
+                "links": [
+                  75
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-custom-scripts",
+              "ver": "609f3afaa74b2f88ef9ce8d939626065e3247469",
+              "Node name for S&R": "ShowText|pysssss",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.7"
+              }
+            },
+            "widgets_values": [
+              "晚上打麻将去都给老娘打扮的美美的啊！老板可说清楚了，到时候得跟客人们一块儿耍耍你们这几个小娃娃。给我把主人伺候巴适了哦！",
+              "晓得嘞，请妈妈放心，紫灵会尽心弄好主人和客人们的",
+              "嗯，还是紫灵个娃儿懂事儿。"
+            ]
+          },
+          {
+            "id": 61,
+            "type": "ShowText|pysssss",
+            "pos": [
+              -2488.7391018863486,
+              3026.8027154205975
+            ],
+            "size": [
+              210,
+              1222
+            ],
+            "flags": {
+              "collapsed": true
+            },
+            "order": 10,
+            "mode": 2,
+            "inputs": [
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "link": 73
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "shape": 6,
+                "type": "STRING",
+                "links": [
+                  74
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-custom-scripts",
+              "ver": "609f3afaa74b2f88ef9ce8d939626065e3247469",
+              "Node name for S&R": "ShowText|pysssss",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.7"
+              }
+            },
+            "widgets_values": [
+              "四川话, 语气俏皮, 带着宠溺, 语速轻快, 女声",
+              "四川话, 语气恭敬, 带着讨好, 语速平稳, 女声",
+              "四川话, 语气满意, 带着宠溺, 语速轻快, 女声"
+            ]
+          },
+          {
+            "id": 63,
+            "type": "TextToList",
+            "pos": [
+              -2981.591801396514,
+              2882.4918218076004
+            ],
+            "size": [
+              400,
+              200
+            ],
+            "flags": {
+              "collapsed": true
+            },
+            "order": 11,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "widget": {
+                  "name": "text"
+                },
+                "link": 76
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "shape": 6,
+                "type": "STRING",
+                "links": [
+                  83,
+                  84,
+                  85
+                ]
+              }
+            ],
+            "title": "剧本转单句列表",
+            "properties": {
+              "cnr_id": "ComfyUI_StringOps",
+              "ver": "d683188ef829c14be8f1a05385345583bd82ee50",
+              "Node name for S&R": "TextToList",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.7"
+              }
+            },
+            "widgets_values": [
+              "",
+              ""
+            ]
+          },
+          {
+            "id": 47,
+            "type": "ExtractSubstring",
+            "pos": [
+              -2644.93905239205,
+              3559.225459702117
+            ],
+            "size": [
+              210,
+              112
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 2,
+            "inputs": [
+              {
+                "localized_name": "input_string",
+                "name": "input_string",
+                "type": "STRING",
+                "widget": {
+                  "name": "input_string"
+                },
+                "link": 83
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  66
+                ]
+              }
+            ],
+            "title": "提取演员信息",
+            "properties": {
+              "cnr_id": "ComfyUI_StringOps",
+              "ver": "d683188ef829c14be8f1a05385345583bd82ee50",
+              "Node name for S&R": "ExtractSubstring",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.7"
+              }
+            },
+            "widgets_values": [
+              "",
+              "[|]"
+            ]
+          },
+          {
+            "id": 58,
+            "type": "ShowText|pysssss",
+            "pos": [
+              -2380.7207910993307,
+              3647.4057342289043
+            ],
+            "size": [
+              210,
+              1126
+            ],
+            "flags": {
+              "collapsed": true
+            },
+            "order": 8,
+            "mode": 2,
+            "inputs": [
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "link": 68
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "shape": 6,
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-custom-scripts",
+              "ver": "609f3afaa74b2f88ef9ce8d939626065e3247469",
+              "Node name for S&R": "ShowText|pysssss",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.7"
+              }
+            },
+            "widgets_values": [
+              "/AI/ComfyUI/input/TTS/林志玲.wav",
+              "/AI/ComfyUI/input/TTS/紫灵.wav",
+              "/AI/ComfyUI/input/TTS/林志玲.wav"
+            ]
+          }
+        ],
+        "groups": [
+          {
+            "id": 4,
+            "title": "3.语音控制",
+            "bounding": [
+              -2976.5265704886697,
+              2922.9004192061566,
+              636.853874852321,
+              363.9422361680737
+            ],
+            "color": "#8A8",
+            "font_size": 24,
+            "flags": {}
+          },
+          {
+            "id": 5,
+            "title": "2.台词文本",
+            "bounding": [
+              -2974.1867665139357,
+              3364.4052823169786,
+              159.06640625,
+              152.2975296503806
+            ],
+            "color": "#8AA",
+            "font_size": 24,
+            "flags": {}
+          },
+          {
+            "id": 6,
+            "title": "4.配音演员设置",
+            "bounding": [
+              -2654.93905239205,
+              3313.831472572375,
+              528.438727908022,
+              569.5742616565295
+            ],
+            "color": "#b06634",
+            "font_size": 24,
+            "flags": {}
+          }
+        ],
+        "links": [
+          {
+            "id": 63,
+            "origin_id": 51,
+            "origin_slot": 0,
+            "target_id": 52,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 85,
+            "origin_id": 63,
+            "origin_slot": 0,
+            "target_id": 51,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 84,
+            "origin_id": 63,
+            "origin_slot": 0,
+            "target_id": 49,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 72,
+            "origin_id": 60,
+            "origin_slot": 0,
+            "target_id": 59,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 86,
+            "origin_id": 49,
+            "origin_slot": 0,
+            "target_id": 59,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 73,
+            "origin_id": 59,
+            "origin_slot": 0,
+            "target_id": 61,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 83,
+            "origin_id": 63,
+            "origin_slot": 0,
+            "target_id": 47,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 65,
+            "origin_id": 55,
+            "origin_slot": 0,
+            "target_id": 54,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 66,
+            "origin_id": 47,
+            "origin_slot": 0,
+            "target_id": 54,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 67,
+            "origin_id": 57,
+            "origin_slot": 0,
+            "target_id": 54,
+            "target_slot": 2,
+            "type": "STRING"
+          },
+          {
+            "id": 68,
+            "origin_id": 54,
+            "origin_slot": 0,
+            "target_id": 58,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 76,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 63,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 75,
+            "origin_id": 52,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 74,
+            "origin_id": 61,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 69,
+            "origin_id": 54,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 2,
+            "type": "STRING"
+          }
+        ],
+        "extra": {
+          "workflowRendererVersion": "LG",
+          "ue_links": [],
+          "links_added_by_ue": []
+        }
+      },
+      {
+        "id": "4be90dea-3939-4054-9c54-dd7b4b85f274",
+        "version": 1,
+        "state": {
+          "lastGroupId": 9,
+          "lastNodeId": 81,
+          "lastLinkId": 113,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "New Subgraph",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -2176.005461061548,
+            3139.8761821706107,
+            120,
+            40
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            -1664.0430151732287,
+            3089.8761821706107,
+            167.728515625,
+            120
+          ]
+        },
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "0e44bb9e-3d40-4b3a-bbc5-14d723a61a11",
+            "name": "prompt",
+            "type": "STRING",
+            "linkIds": [
+              93,
+              99
+            ],
+            "localized_name": "prompt",
+            "label": "剧本工作根目录",
+            "pos": [
+              -1644.0430151732287,
+              3109.8761821706107
+            ]
+          },
+          {
+            "id": "abc9fdb7-a0a6-4b5e-9a0a-bf2a1374982a",
+            "name": "prompt_1",
+            "type": "STRING",
+            "linkIds": [
+              94
+            ],
+            "localized_name": "prompt_1",
+            "label": "剧本名称",
+            "pos": [
+              -1644.0430151732287,
+              3129.8761821706107
+            ]
+          },
+          {
+            "id": "5fa39ae4-29c7-4195-9e29-8add366c316e",
+            "name": "prompt_2",
+            "type": "STRING",
+            "linkIds": [
+              97
+            ],
+            "localized_name": "prompt_2",
+            "label": "剧本输出目录名",
+            "pos": [
+              -1644.0430151732287,
+              3149.8761821706107
+            ]
+          },
+          {
+            "id": "619af7bb-f873-44ad-89a7-2eaaab093432",
+            "name": "STRING",
+            "type": "STRING",
+            "linkIds": [
+              102
+            ],
+            "localized_name": "STRING",
+            "label": "切片保存路径&文件前缀",
+            "pos": [
+              -1644.0430151732287,
+              3169.8761821706107
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 74,
+            "type": "CR Prompt Text",
+            "pos": [
+              -1959.1646578493956,
+              2743.014193410303
+            ],
+            "size": [
+              210,
+              108
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "links": [
+                  93,
+                  99
+                ]
+              },
+              {
+                "localized_name": "show_help",
+                "name": "show_help",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "title": "剧本工作根目录",
+            "properties": {
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {}
+              },
+              "cnr_id": "comfyroll",
+              "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+              "Node name for S&R": "CR Prompt Text"
+            },
+            "widgets_values": [
+              "C:\\AI\\ComfyUI\\output\\audio\\"
+            ]
+          },
+          {
+            "id": 72,
+            "type": "CR Prompt Text",
+            "pos": [
+              -1973.7296265611762,
+              2912.7886092920153
+            ],
+            "size": [
+              210.85676286539888,
+              108
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "links": [
+                  94,
+                  101
+                ]
+              },
+              {
+                "localized_name": "show_help",
+                "name": "show_help",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "title": "剧本名称",
+            "properties": {
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {}
+              },
+              "cnr_id": "comfyroll",
+              "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+              "Node name for S&R": "CR Prompt Text"
+            },
+            "widgets_values": [
+              "test剧本"
+            ]
+          },
+          {
+            "id": 77,
+            "type": "CR Prompt Text",
+            "pos": [
+              -1989.1513581383572,
+              3099.019836285069
+            ],
+            "size": [
+              210,
+              108
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "links": [
+                  97
+                ]
+              },
+              {
+                "localized_name": "show_help",
+                "name": "show_help",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "title": "剧本输出目录",
+            "properties": {
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {}
+              },
+              "cnr_id": "comfyroll",
+              "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+              "Node name for S&R": "CR Prompt Text"
+            },
+            "widgets_values": [
+              "剧本合成OUTPUT"
+            ]
+          },
+          {
+            "id": 79,
+            "type": "TextConcatenator",
+            "pos": [
+              -1994.0430151732287,
+              3428.7381709309184
+            ],
+            "size": [
+              270,
+              178
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "text2",
+                "name": "text2",
+                "shape": 7,
+                "type": "STRING",
+                "widget": {
+                  "name": "text2"
+                },
+                "link": 101
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  102
+                ]
+              }
+            ],
+            "title": "保存目录合并",
+            "properties": {
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {}
+              },
+              "cnr_id": "ComfyUI_StringOps",
+              "ver": "d683188ef829c14be8f1a05385345583bd82ee50",
+              "Node name for S&R": "TextConcatenator"
+            },
+            "widgets_values": [
+              "audio/",
+              "",
+              "/剧本0000",
+              "",
+              "",
+              ""
+            ]
+          }
+        ],
+        "groups": [],
+        "links": [
+          {
+            "id": 101,
+            "origin_id": 72,
+            "origin_slot": 0,
+            "target_id": 79,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 93,
+            "origin_id": 74,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 99,
+            "origin_id": 74,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 94,
+            "origin_id": 72,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 97,
+            "origin_id": 77,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 2,
+            "type": "STRING"
+          },
+          {
+            "id": 102,
+            "origin_id": 79,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 3,
+            "type": "STRING"
+          }
+        ],
+        "extra": {
+          "ue_links": [],
+          "links_added_by_ue": [],
+          "workflowRendererVersion": "LG"
+        }
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7972024500000634,
+      "offset": [
+        5248.18913672849,
+        -2555.488352530286
+      ]
+    },
+    "frontendVersion": "1.39.19",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "links_added_by_ue": []
+  },
+  "version": 0.4
+}
