@@ -81,31 +81,6 @@ for search_path in voxcpm_search_paths:
                     "path": item_path
                 }
 
-#from .voxcpm2_nodes import comfy_entrypoint
-
-#__all__ = ['comfy_entrypoint']
-
 from .voxcpm2_nodes import comfy_entrypoint
 
-NODE_CLASS_MAPPINGS = {}
-NODE_DISPLAY_NAME_MAPPINGS = {}
-
-try:
-    from .jr_voxcpm2.folder_audio_merge_node import (
-        NODE_CLASS_MAPPINGS as JR_NODE_CLASS_MAPPINGS,
-        NODE_DISPLAY_NAME_MAPPINGS as JR_NODE_DISPLAY_NAME_MAPPINGS,
-    )
-
-    NODE_CLASS_MAPPINGS.update(JR_NODE_CLASS_MAPPINGS)
-    NODE_DISPLAY_NAME_MAPPINGS.update(JR_NODE_DISPLAY_NAME_MAPPINGS)
-
-    logger.info(f"Registered JR nodes: {list(JR_NODE_CLASS_MAPPINGS.keys())}")
-
-except Exception as e:
-    logger.exception(f"Failed to register JR VoxCPM2 nodes: {e}")
-
-__all__ = [
-    "comfy_entrypoint",
-    "NODE_CLASS_MAPPINGS",
-    "NODE_DISPLAY_NAME_MAPPINGS",
-]
+__all__ = ['comfy_entrypoint']

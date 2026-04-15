@@ -29,6 +29,19 @@ except Exception as e:
     VoxCPM_LoraTrainer = None
     print(f"[ComfyUI-VoxCPM2] Training nodes disabled: {e}")
 
+try:
+    from .jr_voxcpm2.folder_audio_merge_node import JRVoxCPM2FolderAudioMergeNode
+    JR_NODES_OK = True
+    JR_IMPORT_ERROR = None
+except Exception as e:
+    JRVoxCPM2FolderAudioMergeNode = None
+    JR_NODES_OK = False
+    JR_IMPORT_ERROR = f"{type(e).__name__}: {e}"
+    print(f"[ComfyUI-VoxCPM2] JR nodes disabled: {JR_IMPORT_ERROR}")
+
+
+
+
 logger = logging.getLogger(__name__)
 
 VOXCPM_PATCHER_CACHE = {}
@@ -517,6 +530,13 @@ class VoxCPMExtension(ComfyExtension):
             ])
         else:
             logger.warning("Training nodes are disabled in this environment.")
+
+        if JR_NODES_OK:
+            nodes.extend([
+                JRVoxCPM2FolderAudioMergeNode,
+            ])
+        else:
+            logger.warning(f"JR nodes are disabled in this environment: {JR_IMPORT_ERROR}")
 
         return nodes
 

@@ -6,6 +6,8 @@ import tempfile
 from pathlib import Path
 from typing import List, Tuple
 
+from comfy_api.latest import io
+
 
 SUPPORTED_AUDIO_EXTS = {".wav", ".mp3", ".flac"}
 
@@ -90,8 +92,8 @@ def _merge_with_concat_filter(
     output_ext: str,
 ) -> Tuple[int, str, str]:
     """
-    使用 ffmpeg concat filter 进行真正的音频拼接。
-    这比 concat demuxer + copy 更稳，尤其适合 TTS 切片。
+    Use ffmpeg concat filter for real audio concatenation.
+    More reliable than concat demuxer + stream copy for TTS chunks.
     """
     with tempfile.TemporaryDirectory(prefix="jr_voxcpm2_concat_filter_") as tmpdir:
         filter_script = Path(tmpdir) / "filter_complex.txt"
@@ -103,7 +105,6 @@ def _merge_with_concat_filter(
             input_cmd.extend(["-i", str(f.resolve())])
             filter_inputs.append(f"[{idx}:a]")
 
-        # 例如: [0:a][1:a][2:a]concat=n=3:v=0:a=1[outa]
         filter_text = "".join(filter_inputs) + f"concat=n={len(files)}:v=0:a=1[outa]"
         filter_script.write_text(filter_text, encoding="utf-8")
 
@@ -125,53 +126,59 @@ def _merge_with_concat_filter(
         return _run_cmd(cmd)
 
 
-class JR_VoxCPM2_FolderAudioMerge:
-    @classmethod
-    def INPUT_TYPES(cls):
-        return {
-            "required": {
-                "source_folder": (
-                    "STRING",
-                    {
-                        "default": "",
-                        "multiline": False,
-                        "placeholder": r"D:\ComfyUI\output\audio\book01 or /data/ComfyUI/output/audio/book01",
-                    },
-                ),
-                "output_folder": (
-                    "STRING",
-                    {
-                        "default": "",
-                        "multiline": False,
-                        "placeholder": r"D:\ComfyUI\output\audio\merged or /data/ComfyUI/output/audio/merged",
-                    },
-                ),
-                "output_basename": (
-                    "STRING",
-                    {
-                        "default": "merged_audio",
-                        "multiline": False,
-                    },
-                ),
-                "overwrite": ("BOOLEAN", {"default": True}),
-                "ffmpeg_path": (
-                    "STRING",
-                    {
-                        "default": "",
-                        "multiline": False,
-                        "placeholder": r"optional: C:\ffmpeg\bin\ffmpeg.exe or /usr/bin/ffmpeg",
-                    },
-                ),
-            }
-        }
-
-    RETURN_TYPES = ("STRING", "INT", "STRING")
-    RETURN_NAMES = ("output_file", "file_count", "log")
-    FUNCTION = "merge_audio_folder"
+class JRVoxCPM2FolderAudioMergeNode(io.ComfyNode):
     CATEGORY = "JR/VoxCPM2/Utils"
 
-    def merge_audio_folder(
-        self,
+    @classmethod
+    def define_schema(cls) -> io.Schema:
+        return io.Schema(
+            node_id="JR_VoxCPM2_FolderAudioMerge",
+            display_name="JR VoxCPM2 Folder Audio Merge",
+            category=cls.CATEGORY,
+            description="Merge all audio files in a folder using ffmpeg concat filter. Files are sorted by natural filename order.",
+            inputs=[
+                io.String.Input(
+                    "source_folder",
+                    default="",
+                    multiline=False,
+                    tooltip=r"Folder containing audio chunks, e.g. D:\ComfyUI\output\audio\book01 or /data/ComfyUI/output/audio/book01",
+                ),
+                io.String.Input(
+                    "output_folder",
+                    default="",
+                    multiline=False,
+                    tooltip=r"Folder to save merged audio, e.g. D:\ComfyUI\output\audio\merged or /data/ComfyUI/output/audio/merged",
+                ),
+                io.String.Input(
+                    "output_basename",
+                    default="merged_audio",
+                    multiline=False,
+                    tooltip="Output filename without extension. Final extension follows source audio format.",
+                ),
+                io.Boolean.Input(
+                    "overwrite",
+                    default=True,
+                    label_on="Overwrite",
+                    label_off="Keep Existing",
+                    tooltip="Overwrite the output file if it already exists.",
+                ),
+                io.String.Input(
+                    "ffmpeg_path",
+                    default="",
+                    multiline=False,
+                    tooltip=r"Optional explicit ffmpeg path, e.g. C:\ffmpeg\bin\ffmpeg.exe or /usr/bin/ffmpeg",
+                ),
+            ],
+            outputs=[
+                io.String.Output(display_name="Output File"),
+                io.Int.Output(display_name="File Count"),
+                io.String.Output(display_name="Log"),
+            ],
+        )
+
+    @classmethod
+    def execute(
+        cls,
         source_folder: str,
         output_folder: str,
         output_basename: str,
@@ -210,7 +217,7 @@ class JR_VoxCPM2_FolderAudioMerge:
                 f"Source: {files[0]}\n"
                 f"Output: {output_file}"
             )
-            return (str(output_file), 1, log)
+            return io.NodeOutput(str(output_file), 1, log)
 
         ffmpeg_bin = _resolve_ffmpeg(ffmpeg_path)
 
@@ -237,19 +244,10 @@ class JR_VoxCPM2_FolderAudioMerge:
                 "[First files]\n"
                 f"{file_list_preview}"
             )
-            return (str(output_file), len(files), log)
+            return io.NodeOutput(str(output_file), len(files), log)
 
         raise RuntimeError(
             "Audio merge failed.\n\n"
             "[ffmpeg stderr]\n"
             f"{err.strip()}"
         )
-
-
-NODE_CLASS_MAPPINGS = {
-    "JR_VoxCPM2_FolderAudioMerge": JR_VoxCPM2_FolderAudioMerge,
-}
-
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "JR_VoxCPM2_FolderAudioMerge": "JR VoxCPM2 Folder Audio Merge",
-}
